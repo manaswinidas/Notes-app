@@ -4,32 +4,54 @@
 <head>
   <meta charset="utf-8">
   <title>To-Do List</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 
 <body>
   <header>
-    <center>
-      <h1>To-Do List</h1></center>
+    <nav class="navbar navbar-dark fixed-top bg-primary justify-content-start">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <a class="navbar-brand ml-2" href="#">To-Do List</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!-- <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul> -->
+      </div>
+    </nav>
   </header>
-  <main class="container">
-    <div>
+  <main class="d-flex flex-column">
+    <div class="list-container">
       <ul id="list"></ul>
     </div>
-  </main>
-  <div class="fix">
-    <footer class="bot">
-      <form class="form-group" id="form1">
+    <button class="btn btn-primary btn-fab" id="show">+</button>
+    <div class="add-note-container">
+      <form id="add-note-form">
         <div class="input-group">
           <input class="form-control" type="text" id="idea" placeholder="Type here" />
-          <span class="input-group-btn"><button type="button" class="btn btn-primary" id="add"><i class="fa fa-paper-plane" aria-hidden="true"></i></button></span>
+          <span class="input-group-btn">
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </span>
         </div>
       </form>
-    </footer>
-  </div>
+    </div>
+  </main>
+
   <script type="text/javascript" src="javascripts/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="javascripts/popper.js"></script>
   <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
   <script src="javascripts/index.js"></script>
 </body>

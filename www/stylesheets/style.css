@@ -1,14 +1,30 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-top: 4.5rem;
 }
 
-a {
-  color: "#00B7FF";
+main {
+  height: 100%;
 }
 
-.bot{
-  position:absolute;
-  bottom: 5%;
-  width: 100%;
+#show{
+  border-radius: 160%;
+  background-color: #0000FF;
+  color: white;
+}
+
+.list-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.add-note-container {
+  display: none;
+  box-shadow: 0px -2px 5px 0px rgba(136, 136, 136, 1);
+  background: #fff;
+  padding: 15px;
 }

@@ -1,4 +1,18 @@
 $(() => {
+  const fbutton = $('show');
+  const next = $('.add-note-container');
+  fbutton.click(() => {
+    fbutton.hide(250, () => {
+      next.show(250);
+    });
+  });
+
+  // hide button when focus is lost
+  $('#idea').blur(() => {
+    fbutton.hide(250, () => {
+      next.show(250);
+    });
+  });
 
   function generateUID() {
     // I generate the UID from two parts here
@@ -16,12 +30,18 @@ $(() => {
     localStorage.setItem('todoList', JSON.stringify(Array.from(list)));
   }
 
-  $("#add").click(() => {
+  $("#add-note-form").submit((e) => {
+    e.preventDefault();
     const text = $("#idea").val();
     list.set(generateUID(), text);
     saveTodoList();
     $('#idea').val("");
     render();
+    const container = $('.list-container');
+    container.delay(500).animate({
+      scrollTop: container[0].scrollHeight
+      //scrollTop: 0
+    });
   });
 
   function render() {
