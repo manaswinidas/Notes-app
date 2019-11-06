@@ -1,5 +1,5 @@
 $(() => {
-  const fbutton = $('show');
+  const fbutton = $('#show');
   const next = $('.add-note-container');
   fbutton.click(() => {
     fbutton.hide(250, () => {
