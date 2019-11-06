@@ -16,5 +16,5 @@
 
 #### Fixes/Resolves issue number
 
-#### Adresses issue number
+#### Addresses issue number
 
