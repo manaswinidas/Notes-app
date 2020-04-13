@@ -11,8 +11,22 @@ main {
   height: 100%;
 }
 
+.remove{
+  margin-left: 8px;
+  border: 0;
+  color: red;
+  background: transparent;
+  vertical-align: middle;
+}
+
+.edit {
+  margin-left: 5px;
+  border: 0;
+  background: transparent;
+  vertical-align: middle;
+}
+
 #show{
-  background-color: darkblue;
   color: white;
   display: inline-block;
   width: 50px;
@@ -21,6 +35,24 @@ main {
   position: fixed;
   right: 15px;
   bottom: 15px;
+}
+
+#note{
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#submit-button{
+  margin: 5px;
+  border-radius: 50%;
+}
+
+#close{
+  margin: 5px;
+  border-radius: 50%;
+  color: white;
 }
 
 .list-container {
