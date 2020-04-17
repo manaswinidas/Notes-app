@@ -10,14 +10,18 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "@nano-sql/adapter-sqlite-cordova": "2.1.2",
     "cordova": "^9.0.0",
     "cordova-android": "^6.3.0",
     "cordova-browser": "^5.0.1",
-    "cordova-plugin-whitelist": "^1.3.3"
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-sqlite-storage": "3.2.0"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "adapter-sqlite-cordova": {}
     },
     "platforms": [
       "browser",

@@ -35,14 +35,19 @@
     <div class="list-container">
       <ul id="list"></ul>
     </div>
-    <button class="btn btn-primary" id='show'>+</button>
+    <button class="btn btn-primary" id='show'>
+      <i class="fa fa-plus"></i>
+    </button>
     <div class="add-note-container">
       <form id="add-note-form">
         <div class="input-group">
-          <input class="form-control" type="text" id="idea" placeholder="Type here" />
+          <input class="form-control" type="text" id="note" placeholder="Enter your note here ..." autocomplete="off" />
           <span class="input-group-btn">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" id="submit-button" disabled="true">
             <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="btn btn-danger" id="close" >
+            <i class="fa fa-remove"></i>
           </button>
         </span>
         </div>
@@ -53,7 +58,8 @@
   <script type="text/javascript" src="javascripts/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="javascripts/popper.js"></script>
   <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
-  <script src="javascripts/index.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="javascripts/index.js"></script>
 </body>
 
 </html>
