@@ -11,21 +11,6 @@ main {
   height: 100%;
 }
 
-.remove{
-  margin-left: 8px;
-  border: 0;
-  color: red;
-  background: transparent;
-  vertical-align: middle;
-}
-
-.edit {
-  margin-left: 5px;
-  border: 0;
-  background: transparent;
-  vertical-align: middle;
-}
-
 #show{
   color: white;
   display: inline-block;
@@ -55,14 +40,158 @@ main {
   color: white;
 }
 
-.list-container {
+.remove{
+  margin-left: 8px;
+  border: 0;
+  color: red;
+  background: transparent;
+  vertical-align: middle;
+}
+
+.remove_card {
+  padding: 0px;
+  height: 24px;
+  border: 0px;
+  background: transparent;
+  position: absolute;
+  right: 10px;
+  top: 5px; 
+}
+
+.edit {
+  margin-left: 5px;
+  border: 0;
+  background: transparent;
+  vertical-align: middle;
+}
+
+.active-list {
+  margin: 60px 0px 45px 45px;
+}
+
+.list {
   flex-grow: 1;
   overflow-y: auto;
+  padding-left: 25px;
+  z-index: 0;
+  margin-right: 18px;
 }
 
 .add-note-container {
   display: none;
-  box-shadow: 0px -2px 5px 0px rgba(136, 136, 136, 1);
+  width: calc(100vw - 75px);
+  margin: 0px 10px;
+  padding: 10px;
+  border-bottom-right-radius: .25em; 
+  box-shadow: 0px 0px 5px 0px rgba(136, 136, 136, 1);
   background: #fff;
+  position: fixed;
+  bottom: 10px;
+  left: 54px;
+  z-index: 1;
+}
+
+.box_border_top {
+  width: calc(100vw - 20px);
+  display: none;
+  position: absolute;
+  border-top: 5px;
+  border-style: double;
+  margin-top: 50px;
+  left: 10px;
+  z-index: 1;
+}
+
+.box_border_left {
+  height: calc(100vh - 82px);
+  display: none;
+  position: absolute;
+  border-left: 1px;
+  border-style: solid;
+  margin-left: 60px;
+  top: 72px;
+  z-index: 1;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  height: 48vh;
+  padding: 0 10px 15px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  height: 100%;
   padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  text-align: left;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 750px) {
+
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .column {
+    width: 100%;
+  }
+}
+
+.back_arrow {
+  display: none;
+  border: 0;
+  background: transparent;
+  position: fixed;
+  left: 25px;
+  padding: 0;
+  margin-top: 10px;
+  z-index: 2;
+
+}
+
+.note_add {
+  display: none;
+  background-color: #007bff;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 40px;
+  bottom: 20px;
+  border: 0;
+  border-radius: 50%; 
+  z-index: 1;
+
+}
+
+.is-active {
+  display: block;
+}
+
+.is-inactive {
+  display: none;
+}
+
+.active-card {
+  width: 100%;
+  height: calc(100vh - 72px);
+  position: absolute;
+  padding-bottom: 10px;
 }
