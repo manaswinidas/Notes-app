@@ -9,7 +9,7 @@ References: [https://cordova.apache.org/](https://cordova.apache.org/)
 Once you have the CLI installed you are ready to launch the app.
 
 **For Browser Platform**
-Simply, run the command `cordova run browser` in your terminal. Then, open the browser and enter the url as shown in the terminal,i.e. `localhost:8080/index.html`
+Simply, run the command `cordova run browser` in your terminal. Then, open the browser and enter the url as shown in the terminal,i.e. `localhost:8000/index.html`
 Now, you can use the Notes-app.
 
 **For Android Platform** 
